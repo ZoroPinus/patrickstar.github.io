@@ -1,0 +1,324 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  background-color: #ccffcc;
+}
+.logo {
+  display: flex;
+  flex: 1;
+  margin: 20px;
+}
+.logo h4 {
+  margin: 10px;
+  letter-spacing: 5px;
+  font-size: 30px;
+  padding-top: 10px;
+}
+.nav-links {
+  display: flex;
+  background-color: #ccffcc;
+  justify-content: space-around;
+  width: 30%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: grey;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1280px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*PREVIEW*/
+#preview {
+  background-image: url(./img/Gitara.png);
+  padding-top: 50px;
+  font-family: Raleway, "나눔바른고딕", NanumBarunGothic, ng, "맑은 고딕",
+    "Malgun Gothic", "돋움", Dotum, "애플 SD 산돌고딕 Neo",
+    "Apple SD Gothic Neo", AppleGothic, Helvetica, sans-serif;
+  width: 100%;
+  height: 600px;
+  padding-top: 50px;
+  justify-content: left start;
+  display: block;
+}
+
+#preview .preview-container h5 {
+  padding: 27px 0 0;
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: yellow;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+#preview .preview-container h1 {
+  padding-bottom: 32px;
+  font-size: 40px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+}
+#preview .preview-container p {
+  padding-bottom: 37px;
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+  line-height: 27px;
+}
+
+#preview .preview-container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.welcomeXE2 {
+  width: 100%;
+  margin: 0 auto;
+}
+.welcomeXE2 .noti {
+  display: block;
+  padding: 28px 0 0;
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #cda25a;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.welcomeXE2 .newtro {
+  width: 408px;
+  height: 450px;
+  padding-right: 792px;
+}
+
+/*END OF PREVIEW*/
+
+/*SHOP*/
+h3 {
+  text-align: center;
+  font-family: Raleway, "나눔바른고딕", NanumBarunGothic, ng, "맑은 고딕",
+    "Malgun Gothic", "돋움", Dotum, "애플 SD 산돌고딕 Neo",
+    "Apple SD Gothic Neo", AppleGothic, Helvetica, sans-serif;
+}
+#section {
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  background-color: white;
+}
+#section ul {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#section ul li {
+  list-style: none;
+  background: #eee;
+  padding: 8px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+#section ul li.active {
+  background: #03a9f4;
+  color: #fff;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.product {
+  position: relative;
+}
+.itemBox {
+  width: 350px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 5px;
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  color: transparent;
+}
+.img-text-wrapper:hover .subtitle {
+  color: red;
+  font-weight: 600;
+  font-size: 30px;
+}
+.image-blur {
+  transition: 0.1s;
+  filter: brightness(70%);
+}
+.button {
+  border: 1px solid transparent;
+  background: none;
+  padding: 10px 20px;
+  font-family: Raleway, "나눔바른고딕", NanumBarunGothic, ng, "맑은 고딕",
+    "Malgun Gothic", "돋움", Dotum, "애플 SD 산돌고딕 Neo",
+    "Apple SD Gothic Neo", AppleGothic, Helvetica, sans-serif;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.btn {
+  color: transparent;
+}
+.btn:hover {
+  color: #ccffcc;
+}
+/*END OF SHOP*/
+/*FOOTER*/
+.footer {
+  background-color: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p {
+  color: #8a8a8a;
+}
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1 {
+  flex-basis: 30%;
+}
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img {
+  flex-basis: 30%;
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3 {
+  flex-basis: 24%;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.cprt {
+  text-align: center;
+}
+/*END OF FOOTER*/

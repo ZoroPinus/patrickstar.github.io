@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PATRICKStar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--NAVIGATION-->
+
+    <!--LOGO-->
+
+    <nav>
+      <!--LINKS-->
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="/img/LOGO.png"
+            alt="LOGO"
+            style="width: 70px; height: 70px"
+          />
+        </a>
+        <h4>PATRICK<span style="color: gold">Star</span></h4>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+      <!--BURGER-->
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <script src="app.js"></script>
+
+    <!--END OF NAVIGATION-->
+    <!--SHOP-->
+    <h3>Featured Products</h3>
+    <section id="section">
+      <ul class="gitara">
+        <li class="list active" data-filter="all">All Guitar</li>
+        <li class="list" data-filter="acoustic">Acoustic Guitar</li>
+        <li class="list" data-filter="electric">Electric Guitar</li>
+      </ul>
+      <div class="products">
+        <div class="product">
+          <div
+            class="itemBox acoustic"
+            style="background-image: url(/img/acoustic1.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">Brown Acoustic Guitar</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div
+            class="itemBox electric"
+            style="background-image: url(/img/electric1.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">PEACHY PIE</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div
+            class="itemBox acoustic"
+            style="background-image: url(/img/acoustic2.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">BLACK in the WOODS</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div
+            class="itemBox electric"
+            style="background-image: url(/img/electric2.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">THE CLASSIC</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div
+            class="itemBox acoustic"
+            style="background-image: url(/img/acoustic3.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">VINTAGE</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div
+            class="itemBox electric"
+            style="background-image: url(/img/electric3.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">ROAD RANGER</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div
+            class="itemBox acoustic"
+            style="background-image: url(/img/acoustic4.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">JUST ACOUSTIC GUITAR</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div
+            class="itemBox electric"
+            style="background-image: url(/img/electric4.jpg)"
+          >
+            <div class="img-text-wrapper">
+              <div class="subtitle">VIGNETTE</div>
+              <a href="#" class="button btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".list").click(function () {
+          const value = $(this).attr("data-filter");
+          if (value == "all") {
+            $(".itemBox").show("1000");
+          } else {
+            $(".itemBox")
+              .not("." + value)
+              .hide("1000");
+            $(".itemBox")
+              .filter("." + value)
+              .show("1000");
+          }
+        });
+        $(".list").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+    <div class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="footer-col-2">
+            <img src="/img/LOGO.png" alt="logo" />
+          </div>
+          <div class="footer-col-3">
+            <h3>Follow PATRICKStar@</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100005896305613"
+                  target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/_pats04_/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="cprt">Copyright 2020</p>
+      </div>
+    </div>
+    <script>
+      const productItems = document.querySelectorAll(".product");
+
+      productItems.forEach((productItem) => {
+        productItem.addEventListener("mouseover", () => {
+          console.log(productItem.childNodes[1].classList);
+          productItem.childNodes[1].classList.add("image-blur");
+        });
+
+        productItem.addEventListener("mouseout", () => {
+          console.log(productItem.childNodes[1].classList);
+          productItem.childNodes[1].classList.remove("image-blur");
+        });
+      });
+    </script>
+  </body>
+</html>
